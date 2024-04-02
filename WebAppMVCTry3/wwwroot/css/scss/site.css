@@ -719,3 +719,30 @@ footer .container .social-media {
     width: 30%;
   }
 }
+#signin .container form {
+  padding: 1rem;
+}
+#signin .container form .container {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "email" "password" "remember" "button" "forgot";
+}
+#signin .container form #form-email {
+  grid-area: email;
+}
+#signin .container form #form-password {
+  grid-area: password;
+}
+#signin .container form #form-remember {
+  grid-area: remember;
+  padding: 1rem 0;
+}
+#signin .container form #form-button {
+  grid-area: button;
+}
+#signin .container form #form-forgot-password {
+  grid-area: forgot;
+  margin: 1rem 0 0 0;
+  text-align: center;
+}
