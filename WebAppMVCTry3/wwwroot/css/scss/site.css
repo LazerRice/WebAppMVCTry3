@@ -328,23 +328,23 @@ form .checkbox-group label {
   margin: 0;
   font-weight: 400;
 }
-form .checkbox-group label {
+form label {
   margin-bottom: 0.188rem;
   font-weight: 700;
 }
-form .checkbox-group input {
+form input {
   padding: 1rem;
   border-radius: 0.5rem !important;
   border: 0.065rem solid #D4D7E5;
 }
-form .checkbox-group input::placeholder {
+form input::placeholder {
   opacity: 0.4;
 }
-form .checkbox-group input.input-validation-error {
+form input.input-validation-error {
   border: 0.065rem solid #EF4444 !important;
   color: #EF4444;
 }
-form .checkbox-group input.input-validation-error::placeholder {
+form input.input-validation-error::placeholder {
   color: #EF4444;
 }
 
