@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebAppMVCTry3.ViewModels;
 
 namespace WebAppMVCTry3.Controllers
 {
@@ -6,28 +7,41 @@ namespace WebAppMVCTry3.Controllers
     {
         public IActionResult Index()
         {
-            
             ViewData["Title"] = "Profile";
             return View();
         }
 
-        public IActionResult SignIn() 
+		[Route("/signup")]
+		[HttpGet]
+		public IActionResult SignUp()
+		{
+			var viewModel = new SignUpViewModel();
+			return View(viewModel);
+		}
+
+		[Route("/signup")]
+		[HttpPost]
+		public IActionResult SignUp(SignUpViewModel viewModel)
+		{
+			if(!ModelState.IsValid)
+				return View(viewModel);
+
+			return RedirectToAction("SignIn" , "Auth");
+		}
+
+
+		[Route("/signin")]
+		public IActionResult SignIn() 
         {
-			[Route("/signin")]
+			
 			ViewData["Title"] = "Sign In";
             return View();
         }
-
-        public IActionResult SignUp()
+	
+		[Route("/signout")]
+		public new IActionResult SignOut() 
         {
-			[Route("/signup")]
-			ViewData["Title"] = "Sign Up";
-            return View();
-        }
-
-        public new IActionResult SignOut() 
-        {
-			[Route("/signout")]
+			
 			return RedirectToAction("Index", "Home");
         }
     }
