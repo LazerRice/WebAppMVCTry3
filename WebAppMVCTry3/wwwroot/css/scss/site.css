@@ -699,3 +699,23 @@ footer .container .social-media {
 #signup .container form .content #form-submit {
   grid-area: button;
 }
+
+#signin {
+  height: 100%;
+}
+#signin .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media (min-width: 992) {
+  #signin .container {
+    width: 60%;
+  }
+}
+@media (min-width: 1200) {
+  #signin .container {
+    width: 30%;
+  }
+}

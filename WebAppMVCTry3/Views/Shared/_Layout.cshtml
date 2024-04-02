@@ -32,8 +32,8 @@
                 <label>Dark</label>
             </div>
 
-            <div class="account-buttons">
-                <a class="btn-gray" aps-controller="Account" asp-page="/signin"><i class="fa-regular fa-right-to-bracket"></i><span>Sign in</span></a>
+            <div class="account-buttons" class="hide">
+                    <a asp-controller="Auth" asp-action="SignIn" class="btn-theme"><i class="fa-regular fa-right-to-backet"></i><span>Sign In</span></a>                
                     <a asp-controller="Auth" asp-action="SignUp" class="btn-theme"><i class="fa-regular fa-user"></i><span>Sign Up</span></a>
             </div>
 

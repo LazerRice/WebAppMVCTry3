@@ -31,13 +31,29 @@ namespace WebAppMVCTry3.Controllers
 
 
 		[Route("/signin")]
+		[HttpGet]
 		public IActionResult SignIn() 
         {
-			
-			ViewData["Title"] = "Sign In";
+
+			var ViewData = new SignInViewModel();
             return View();
         }
-	
+
+		[Route("/signin")]
+		[HttpPost]
+		public IActionResult Signin(SignInViewModel viewModel)
+		{
+			if (!ModelState.IsValid)
+			{
+				viewModel.ErrorMessage = "Incorrect email or password";
+				return View(viewModel);
+
+			}
+			
+
+			return RedirectToAction("Account", "Index");
+		}
+
 		[Route("/signout")]
 		public new IActionResult SignOut() 
         {
