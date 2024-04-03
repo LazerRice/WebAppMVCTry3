@@ -222,6 +222,25 @@ h6, .h6 {
   color: #FFFFFF;
 }
 
+.btn-gray {
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 28op;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #33354D;
+  color: #33354D;
+  border: none;
+}
+.btn-gray:hover {
+  text-decoration: none;
+  background: #565973;
+  color: #FFFFFF;
+}
+
 .btn-switch {
   display: flex;
   align-items: center;

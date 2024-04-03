@@ -38,6 +38,19 @@
     }
 }
 
+.btn-gray{
+    @include button;
+    background: $gray-800;
+    color: $gray-800;
+    border: none;
+
+    &:hover{
+        text-decoration: none;
+        background: $gray-700;
+        color: $white;
+    }
+}
+
 .btn-switch {
     display: flex;
     align-items: center;
